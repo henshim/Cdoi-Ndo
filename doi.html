@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Fahrenheit</label>
+    <input id="inFahrenheit" type="number" placeholder="Fahrenheit"
+           oninput="chuyendoinhietdo(this.value)"
+    onchange="chuyendoinhietdo(this.value)">
+</p>
+<p>Celsius: <span id="outCelsius"></span> </p>
+<script>
+    function chuyendoinhietdo(valNum){
+       valNum=parseFloat(valNum);
+       document.getElementById("outCelsius").innerHTML=(valNum-32)/1.8;
+    }
+</script>
+</body>
+</html>
